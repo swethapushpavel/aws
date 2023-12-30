@@ -1,0 +1,566 @@
+<html>
+    <head>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+        <script src='https://kit.fontawesome.com/a076d05399.js' crossorigin='anonymous'></script>
+        <link rel="icon" href="blood-alms-low-resolution-logo-black-on-white-background.png" type="image/icon type">
+    <style>
+    * {
+        margin: 0;
+        padding: 0;
+        -webkit-box-sizing: border-box;
+                box-sizing: border-box;
+    }
+    html{
+        font: normal 16px sans-serif;
+        color: #555;
+    }
+    ul, nav{
+        list-style: none;
+    }
+    /*nav-bar style*/
+    nav{
+        list-style: none;
+    }
+    a{
+        text-decoration: none;
+        opacity: 0.75;
+        margin: 0 15px;
+        color: rgb(8, 7, 7);
+        cursor: pointer;
+    }
+    a:hover{
+        opacity: 1;
+    }
+    a.btn{
+        border-radius: 4px;
+        text-transform: uppercase;
+        font-weight: bold;
+        text-align: center;
+        background-color: #3f51b5;
+        opacity: 1;
+        margin-top: 10px;
+        color: white
+    }
+    
+    
+    section{
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+            -ms-flex-direction: column;
+                flex-direction: column;
+        -webkit-box-align: center;
+            -ms-flex-align: center;
+                align-items: center;
+        padding: 100px;
+    }
+    
+    /*
+    !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+    Header Configurations
+    !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+    */
+    
+    header{
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 10;
+        width: 100%;
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-pack: justify;
+            -ms-flex-pack: justify;
+                justify-content: space-between;
+        -webkit-box-align:center;
+            -ms-flex-align:center;
+                align-items:center;
+        padding: 35px 100px 0;
+        -webkit-animation: 1s fadein 0.5s forwards;
+                animation: 1s fadein 0.5s forwards;
+        opacity: 0.5;
+        color: white;
+    }
+    @-webkit-keyframes fadein{
+        100%{
+            opacity: 1;
+        }
+    }
+    @keyframes fadein{
+        100%{
+            opacity: 1;
+        }
+    }
+    
+    header h2{
+        font-family: "Quicksand, sans-serif";
+        color: rgb(12, 12, 12);
+    }
+    
+    header nav{
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        margin-right: -15px;
+    }
+    header nav li{
+        margin: 0 15px;
+        color: white;
+    }
+    @media (max-width: 1000px){
+        header{
+            padding: 20px 50px;
+        }
+    }
+    
+    
+    @media (max-width: 700px){
+        header{
+            -webkit-box-orient: vertical;
+            -webkit-box-direction: normal;
+                -ms-flex-direction: column;
+                    flex-direction: column;		
+        }
+    
+        header h2{
+            margin-bottom: 15px;
+        }
+    }
+    
+    
+    
+    /*
+    !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+    Cover and Image Animation configuration
+    !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+    */
+    .hero{
+        position: relative;
+        -webkit-box-pack: center;
+            -ms-flex-pack: center;
+                justify-content: center;
+        text-align: center;
+        min-height: 100vh;
+        color: white;
+    }
+    .hero .background-image{
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-size: cover;
+        z-index: -1;
+        background-color: #80a3db;
+        -webkit-animation: 15s change 1s forwards;
+                animation: 15s change 1s forwards;
+        -webkit-animation-iteration-count:infinite;
+                animation-iteration-count:infinite;
+    }
+    
+    @keyframes change{
+        /* 0%{
+        background-image: url(https://c1.wallpaperflare.com/preview/684/332/850/balloons-colorful-blue-sky.jpg);
+        }
+        25%{
+           background-image: url(https://c1.wallpaperflare.com/preview/684/332/850/balloons-colorful-blue-sky.jpg);
+        }
+        50%{
+            background-image: url(https://e0.pxfuel.com/wallpapers/761/94/desktop-wallpaper-blood-types-and-to-whom-you-can-donate-donation-thumbnail.jpg);
+            
+        } */
+        /* 75%{
+            background-image: url(https://thumbs.dreamstime.com/b/aerial-view-lago-antorno-dolomites-lake-mountain-landscape-alps-peak-misurina-cortina-di-ampezzo-italy-reflected-103752677.jpg);
+            
+        }
+        100%{
+            background-image: url(https://thumbs.dreamstime.com/b/aerial-view-lago-antorno-dolomites-lake-mountain-landscape-alps-peak-misurina-cortina-di-ampezzo-italy-reflected-103752677.jpg);
+            
+        } */
+    }
+    .hero h1{
+        font: bold 60px "Open Sans", sans-serif;
+        margin-bottom: 40px;
+        color: white;
+    }
+    .hero h3{
+        font: normal 28px "Open Sans", sans-serif;
+        margin-bottom: 40px;
+        color: white;
+    }
+    .hero a.btn{
+        padding: 20px 46px;
+    }
+    .hero-content-area{
+        opacity: 0;
+        margin-top: 100px;
+        -webkit-animation: 1s slidefade 1s forwards;
+                animation: 1s slidefade 1s forwards;
+    }
+    @-webkit-keyframes slidefade{
+        100%{
+            opacity: 1;
+            margin: 0;
+        }
+    }
+    @keyframes slidefade{
+        100%{
+            opacity: 1;
+            margin: 0;
+        }
+    }
+    
+    
+    .grid{
+        width: 100%;
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -ms-flex-wrap: wrap;
+            flex-wrap: wrap;
+        -webkit-box-pack: center;
+            -ms-flex-pack: center;
+                justify-content: center;
+    }
+    
+    hr{
+        width: 100%;
+        height: 2px;
+        background-color: #3f51b5;
+        border: 0;
+        margin-bottom: 50px;
+    }
+    
+    
+    
+    @media (max-width: 800px){
+    
+        .hero{
+            min-height: 600px;
+        }
+        .hero h1{
+            font-size: 48px;
+        }
+    
+        .hero h3{
+            font-size: 24px;
+        }
+    
+        .hero a.btn{
+            padding: 15px 40px;
+        }
+    
+    }
+    
+    
+    /*
+    !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!1
+    Section Configurations
+    !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+    */
+    section h3.title{
+        text-transform: capitalize;
+        font: bold 32px "Open Sans", sans-serif;
+        margin-bottom: 30px;
+        text-align: center;
+    }
+    
+    
+    .destinations .grid li{
+        height: 350px;
+        padding: 20px;
+        background-clip: content-box;
+        background-size: cover;
+        background-position: center;
+    }
+    
+    .destinations .grid li.small{
+        -ms-flex-preferred-size: 30%;
+            flex-basis: 30%;
+    }
+    
+    .destnations .grid li.large{
+        -ms-flex-preferred-size: 70%;
+            flex-basis: 70%;
+    }
+    
+    
+    
+    
+    
+    
+    
+    /*---------------------
+         Contact Section
+    ---------------------*/
+    
+    .contact{
+        background-color: #f7f7f7;
+    }
+    
+    .contact form{
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-align: center;
+            -ms-flex-align: center;
+                align-items: center;
+        -webkit-box-pack: center;
+            -ms-flex-pack: center;
+                justify-content: center;
+        -ms-flex-wrap: wrap;
+            flex-wrap: wrap;
+    
+        max-width: 800px;
+        width: 80%;
+    }
+    
+    .contact form input{
+        padding: 15px;
+        -webkit-box-flex: 1;
+            -ms-flex: 1;
+                flex: 1;
+        margin-right: 30px;
+        font-size: 18px;
+        color: #555;
+    }
+    
+    .contact form .btn{
+        padding: 18px 42px;
+    }
+    
+    
+    @media (max-width: 800px){
+    
+        .contact form input{
+            -ms-flex-preferred-size: 100%;
+                flex-basis: 100%;
+            margin: 0 0 20px 0;
+        }
+    
+    }
+    
+    
+    
+    
+    /*-------------
+         Footer
+    -------------*/
+    
+    footer{
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+            -ms-flex-direction: column;
+                flex-direction: column;
+        -webkit-box-align: center;
+            -ms-flex-align: center;
+                align-items: center;
+        text-align: center;
+        color: #fff;
+        background-color: #414a4f;
+        padding: 60px 0;
+    }
+    
+    footer ul{
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        margin-bottom: 25px;
+        font-size: 32px;
+    }
+    
+    footer ul li{
+        margin: 0 8px;	
+    }
+    
+    footer ul li:first-child{
+        margin-left: 0;	
+    }
+    
+    footer ul li:last-child{
+        margin-right: 0;	
+    }
+    
+    footer p{
+        text-transform: uppercase;
+        font-size: 14px;
+        color: rgba(255,255,255,0.6);
+        margin-bottom: 10px;
+    }
+    
+    footer p a{
+        color: #fff;
+    }
+    
+    @media (max-width: 700px){
+    
+        footer{
+            padding: 80px 15px;
+        }
+    
+    }
+    .itag{
+        font-size: 20px;
+        font-family: inherit;
+         align-items: center;
+         text-align: center;
+    }
+    .divi1{
+        padding-bottom: 20px;
+        text-align: justify;
+        background-color: #eee;
+        height: 100px;
+    }
+    .divi2{
+        padding-bottom: 20px;
+        text-align: justify;
+        background-color: #eee;
+        height: 100px;
+    }
+    .divi3{
+        padding-bottom: 20px;
+        text-align: justify;
+        background-color: #eee;
+        height: 100px;
+    }
+    .divi4{
+        padding-bottom: 20px;
+        text-align: justify;
+        background-color: #eee;
+        height: 100px;
+    }
+    @import url(https://fonts.googleapis.com/css?family=Oswald:300,400,700);
+@import url(https://fonts.googleapis.com/css?family=Source+Sans+Pro:200,300,400,600,700,900,200italic,300italic,400italic,600italic,700italic,900italic);
+
+/* Override UGG site */
+#main {width: 100%; padding:0;}
+.content-asset p {margin:0 auto;}
+.breadcrumb {display:none;}
+
+/* Helpers */
+/**************************/
+.margin-top-10 {padding-top:10px;}
+.margin-bot-10 {padding-bottom:10px;}
+
+/* Typography */
+/**************************/
+#parallax-world-of-ugg h1 {font-family:'Oswald', sans-serif; font-size:24px; font-weight:400; text-transform: uppercase; color:rgb(5, 5, 5); padding:0; margin:0;}
+#parallax-world-of-ugg h2 {font-family:'Oswald', sans-serif; font-size:70px; letter-spacing:10px; text-align:center; color:rgb(7, 7, 7); font-weight:400; text-transform:uppercase; z-index:10; opacity:.9;}
+#parallax-world-of-ugg h3 {font-family:'Oswald', sans-serif; font-size:14px; line-height:0; font-weight:400; letter-spacing:8px; text-transform: uppercase; color:black;}
+#parallax-world-of-ugg p {font-family:'Source Sans Pro', sans-serif; font-weight:400; font-size:15px; line-height:24px;}
+.first-character {font-weight:400; float: left; font-size: 84px; line-height: 64px; padding-top: 4px; padding-right: 8px; padding-left: 3px; font-family: 'Source Sans Pro', sans-serif;}
+
+.sc {color: #3b8595;}
+.ny {color: #3d3c3a;}
+.atw {color: #c48660;}
+
+/* Section - Title */
+/**************************/
+#parallax-world-of-ugg .title {background: rgb(252, 252, 252); padding: 60px; margin:0 auto; text-align:center;}
+#parallax-world-of-ugg .title h1 {font-size:35px; letter-spacing:8px;}
+
+/* Section - Block */
+/**************************/
+#parallax-world-of-ugg .block {background: white; padding: 60px; width:820px; margin:0 auto; text-align:justify;}
+#parallax-world-of-ugg .block-gray {background: #f2f2f2;padding: 60px;}
+#parallax-world-of-ugg .section-overlay-mask {position: absolute; top: 0; left: 0; width: 100%; height: 100%; background-color: black; opacity: 0.70;}
+
+/* Section - Parallax */
+/**************************/
+#parallax-world-of-ugg .parallax-one {padding-top: 200px; padding-bottom: 200px; overflow: hidden; position: relative; width: 100%; background-image: url(blood-alms-low-resolution-logo-white-on-black-background.png); background-attachment: fixed; background-size: cover; -moz-background-size: cover; -webkit-background-size: cover; background-repeat: no-repeat; background-position: top center;}
+#parallax-world-of-ugg .parallax-two {padding-top: 200px; padding-bottom: 200px; overflow: hidden; position: relative; width: 100%; background-image: url(homepi.jpg); background-attachment: fixed; background-size: cover; -moz-background-size: cover; -webkit-background-size: cover; background-repeat: no-repeat; background-position: center center;}
+#parallax-world-of-ugg .parallax-three {padding-top: 200px; padding-bottom: 200px; overflow: hidden; position: relative; width: 100%; background-image: url(https://th.bing.com/th/id/R.6ec980d14e7a10872a31b24981a724d4?rik=MUrdVgzG8dy9%2fw&riu=http%3a%2f%2fbit.ly%2fVwKPOb&ehk=l6LVWGC1TGrVGCVyU01OwpQsYZ5ZwTlTOtcCEedmUCQ%3d&risl=&pid=ImgRaw&r=0); background-attachment: fixed; background-size: cover; -moz-background-size: cover; -webkit-background-size: cover; background-repeat: no-repeat; background-position: center center;}
+
+/* Extras */
+/**************************/
+#parallax-world-of-ugg .line-break {border-bottom:1px solid black; width: 150px; margin:0 auto;}
+
+/* Media Queries */
+/**************************/
+@media screen and (max-width: 959px) and (min-width: 768px) {
+  #parallax-world-of-ugg .block {padding: 40px; width:620px;}
+}
+@media screen and (max-width: 767px) {
+  #parallax-world-of-ugg .block {padding: 30px; width:420px;}
+  #parallax-world-of-ugg h2 {font-size:40px;}
+  #parallax-world-of-ugg .block {padding: 30px;}
+  #parallax-world-of-ugg .parallax-one, #parallax-world-of-ugg .parallax-two, #parallax-world-of-ugg .parallax-three {padding-top:100px; padding-bottom:100px;}
+}
+@media screen and (max-width: 479px) {
+  #parallax-world-of-ugg .block {padding: 30px 15px; width:290px;}
+}
+         </style>
+          </head>
+    <body>
+       
+        <header>
+            <div class="logo">
+      <img width="80px" height="80px" src="blood-alms-low-resolution-logo-black-on-white-background.png"></a>
+</div> <h2 href="#" style="color: black;"> Blood Alms</h2>
+           
+        <nav>
+            <li><a href="home1.html">Home</a> </li> 
+             <li><a href="whorwe.html">Who are we</a> </li>
+             <li><a href="howitworks.html">How it works</a> </li>
+             <li><a href="whocangetmyblood.html">Working process</a> </li>
+             <li><a href="bloodrequest.html">Blood Requests</a> </li>
+             
+         </nav>
+        </header>
+         <br><br><br>
+        <div id="parallax-world-of-ugg">
+  
+            <section>
+              <div class="title">
+                <h1>About Us</h1>
+              </div>
+            </section>
+            
+            <section>
+                <h2>Find a fortune</h2>
+                <div class="parallax-one">
+                  
+                </div>
+            </section>
+            
+            <section>
+              <div class="block">
+                <p><span class="first-character sc">F</span>ind a fortune  Society is an NGO, a non-governmental organization which is being run by a Group of likeminded, highly Educated and dedicated people with a non-profit motive that works for the upliftment and rehabilitation of the underprivileged Children, Girls, Women and Youth both on the National and International level. We have a vision and are task oriented and are driven by people with a common interest, we perform a variety of services with a social objective and on humanitarian grounds.</p>
+                <p class="line-break margin-top-10"></p>
+              </div>
+            </section>
+            
+            <section>
+              <div class="parallax-two">
+              </div>
+            </section>
+            
+            <section>
+              <div class="block">
+                <p><span class="first-character ny">O</span>ur passion lies in addressing a plethora of issues pertaining to the common man and to bring citizen concerns to the notice of both the state and central Government. We advocate and monitor policies through the provision of information. We address various issues, such as human rights violations, environmental, health and livelihood. We analyze the root cause of the problems and try to find pragmatic solutions through our expertise that serves as early warning mechanisms and help monitor and implement various policies and programmes in the most judicious manner.</p>
+                <p class="line-break margin-top-10"></p>
+              </div>
+            </section>
+            
+            <section>
+              <div class="parallax-three">
+              </div>
+            </section>
+            
+            <section>
+              <div class="block">
+                <p><span class="first-character atw">T</span>he objective of the Mission is to “build strong and vibrant institutional platforms for the rural poor that would enable them to increase household incomes through livelihood enhancements and improved access to financial and other services”. The focus of the Mission will also include leveraging financial resources, livelihood support, public services and to ensure their entitlements.</p>
+                <p class="line-break margin-top-10"></p>
+              </div>
+            </section>
+              
+            </div>
+    </body>
+</html>

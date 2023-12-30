@@ -1,0 +1,991 @@
+<!doctype html>
+<html>
+    <meta charset ="utf-8">
+    <meta name ="viewport" content="width=device-width, intial-scale=1">
+    <title>Blood Alms</title>
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Quicksand" rel="stylesheet">
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.0/css/font-awesome.min.css">
+      <link rel="profile" href="https://gmpg.org/xfn/11">
+      <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
+     <style>
+        /*
+* {
+    margin: 0;
+    padding: 0;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+}
+html{
+    font: normal 16px sans-serif;
+    color: #555;
+}
+ul, nav{
+    list-style: none;
+}
+/*nav-bar style*/
+nav{
+    list-style: none;
+}
+a{
+    text-decoration: none;
+    opacity: 0.75;
+    margin: 0 15px;
+    color: white;
+    cursor: pointer;
+}
+a:hover{
+    opacity: 1;
+}
+a.btn{
+    border-radius: 4px;
+    text-transform: uppercase;
+    font-weight: bold;
+    text-align: center;
+    background-color: #3f51b5;
+    opacity: 1;
+    margin-top: 10px;
+    color: white
+}
+
+
+section{
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    padding: 100px;
+}
+
+/*
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+Header Configurations
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+*/
+
+header{
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 10;
+    width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align:center;
+        -ms-flex-align:center;
+            align-items:center;
+    padding: 35px 100px 0;
+    -webkit-animation: 1s fadein 0.5s forwards;
+            animation: 1s fadein 0.5s forwards;
+    opacity: 0.5;
+    color: white;
+}
+@-webkit-keyframes fadein{
+    100%{
+        opacity: 1;
+    }
+}
+@keyframes fadein{
+    100%{
+        opacity: 1;
+    }
+}
+
+header h2{
+    font-family: "Quicksand, sans-serif";
+    color: white;
+}
+
+header nav{
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    margin-right: -15px;
+}
+header nav li{
+    margin: 0 15px;
+    color: white;
+}
+@media (max-width: 1000px){
+	header{
+		padding: 20px 50px;
+	}
+}
+
+
+@media (max-width: 700px){
+	header{
+		-webkit-box-orient: vertical;
+		-webkit-box-direction: normal;
+		    -ms-flex-direction: column;
+		        flex-direction: column;		
+	}
+
+	header h2{
+		margin-bottom: 15px;
+	}
+}
+
+
+
+/*
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+Cover and Image Animation configuration
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+*/
+.hero{
+    position: relative;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    text-align: center;
+    min-height: 100vh;
+    color: white;
+}
+.hero .background-image{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    z-index: -1;
+    background-color: #80a3db;
+    -webkit-animation: 15s change 1s forwards;
+            animation: 15s change 1s forwards;
+    -webkit-animation-iteration-count:infinite;
+            animation-iteration-count:infinite;
+}
+
+
+@keyframes change{
+    0%{
+    background-image: url(https://static.vecteezy.com/system/resources/previews/009/484/977/non_2x/hands-of-the-giver-and-the-recipient-to-donate-blood-blood-donation-concept-heart-medical-sign-give-blood-save-life-world-blood-donor-day-june-14-3d-eps10-illustration-vector.jpg);
+    }
+   
+    
+}
+.hero h1{
+    font: bold 60px "Open Sans", sans-serif;
+    margin-bottom: 40px;
+    color: white;
+}
+.hero h3{
+    font: normal 28px "Open Sans", sans-serif;
+    margin-bottom: 40px;
+    color: white;
+}
+.hero a.btn{
+    padding: 20px 46px;
+}
+.hero-content-area{
+    opacity: 0;
+    margin-top: 100px;
+    -webkit-animation: 1s slidefade 1s forwards;
+            animation: 1s slidefade 1s forwards;
+}
+@-webkit-keyframes slidefade{
+    100%{
+        opacity: 1;
+        margin: 0;
+    }
+}
+@keyframes slidefade{
+    100%{
+        opacity: 1;
+        margin: 0;
+    }
+}
+
+
+.grid{
+    width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+}
+
+hr{
+    width: 100%;
+    height: 2px;
+    background-color: #3f51b5;
+    border: 0;
+    margin-bottom: 50px;
+}
+
+
+
+@media (max-width: 800px){
+
+	.hero{
+		min-height: 600px;
+	}
+	.hero h1{
+		font-size: 48px;
+	}
+
+	.hero h3{
+		font-size: 24px;
+	}
+
+	.hero a.btn{
+		padding: 15px 40px;
+	}
+
+}
+
+
+/*
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!1
+Section Configurations
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+*/
+section h3.title{
+    text-transform: capitalize;
+    font: bold 32px "Open Sans", sans-serif;
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+
+.destinations .grid li{
+    height: 350px;
+    padding: 20px;
+    background-clip: content-box;
+    background-size: cover;
+    background-position: center;
+}
+
+.destinations .grid li.small{
+    -ms-flex-preferred-size: 30%;
+        flex-basis: 30%;
+}
+
+.destnations .grid li.large{
+    -ms-flex-preferred-size: 70%;
+        flex-basis: 70%;
+}
+
+
+
+
+
+
+
+/*---------------------
+ 	Contact Section
+---------------------*/
+
+.contact{
+	background-color: #f7f7f7;
+}
+
+.contact form{
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-align: center;
+	    -ms-flex-align: center;
+	        align-items: center;
+	-webkit-box-pack: center;
+	    -ms-flex-pack: center;
+	        justify-content: center;
+	-ms-flex-wrap: wrap;
+	    flex-wrap: wrap;
+
+	max-width: 800px;
+	width: 80%;
+}
+
+.contact form input{
+	padding: 15px;
+	-webkit-box-flex: 1;
+	    -ms-flex: 1;
+	        flex: 1;
+	margin-right: 30px;
+	font-size: 18px;
+	color: #555;
+}
+
+.contact form .btn{
+	padding: 18px 42px;
+}
+
+
+@media (max-width: 800px){
+
+	.contact form input{
+		-ms-flex-preferred-size: 100%;
+		    flex-basis: 100%;
+		margin: 0 0 20px 0;
+	}
+
+}
+
+
+
+
+/*-------------
+ 	Footer
+-------------*/
+
+footer{
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-orient: vertical;
+	-webkit-box-direction: normal;
+	    -ms-flex-direction: column;
+	        flex-direction: column;
+	-webkit-box-align: center;
+	    -ms-flex-align: center;
+	        align-items: center;
+	text-align: center;
+	color: #fff;
+	background-color: #414a4f;
+	padding: 60px 0;
+}
+
+footer ul{
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	margin-bottom: 25px;
+	font-size: 32px;
+}
+
+footer ul li{
+	margin: 0 8px;	
+}
+
+footer ul li:first-child{
+	margin-left: 0;	
+}
+
+footer ul li:last-child{
+	margin-right: 0;	
+}
+
+footer p{
+	text-transform: uppercase;
+	font-size: 14px;
+	color: rgba(255,255,255,0.6);
+	margin-bottom: 10px;
+}
+
+footer p a{
+	color: #fff;
+}
+
+@media (max-width: 700px){
+
+	footer{
+		padding: 80px 15px;
+	}
+
+}
+
+/*
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!1
+Section Configurations
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+*/
+.fz-fab-container{
+        bottom: 0px !important;
+        right: 0px !important;
+    }
+    .fz-fab-buttons.fz-fab-secondary{
+        -webkit-transform: translateY(50px) !important;
+        -ms-transform: translateY(50px) !important;
+        transform: translateY(50px) !important;
+    }
+    .fz-fab-box{
+        bottom: 15px !important;
+        right: 15px !important; 
+    } 
+.fz-fab-container{
+    position: fixed !important;
+    margin: 1em !important;
+    z-index: 999999999 !important;
+}
+.fz-fab-buttons:active,
+.fz-fab-buttons:focus,
+.fz-fab-buttons:hover{
+    box-shadow: 1px 4px 14px 1px rgba(0, 0, 0, 0.20) !important;
+}
+.fz-fab-buttons.fz-fab-primary{
+    box-shadow: 0px 2px 7px 0px rgba(0, 0, 0, 0.20) !important;
+    border-radius: 100% !important;
+    display: block !important;
+    width: 64px !important;
+    height: 64px !important;
+    margin: 10px auto 0 !important;
+    position: relative !important;
+    -webkit-transition: all .1s ease-out !important;
+    transition: all .1s ease-out !important;
+    text-align: center !important;
+    font-size: 28px !important;
+    z-index: 999 !important;
+}
+.fz-fab-buttons.fz-fab-primary img{
+    border-radius: 50% !important;
+    width: 64px !important;
+    height: 64px !important;
+}
+.fz-fab-buttons.fz-fab-secondary{
+    box-shadow: 0px 2px 7px 0px rgba(0, 0, 0, 0.20) !important;
+    border-radius: 100% !important;
+    display: block !important;
+    width: 48px !important;
+    height: 48px !important;
+    margin: auto !important;
+    position: relative !important;
+    text-align: center !important;
+    font-size: 24px !important;
+    z-index: 100 !important;
+    opacity: 0 !important;
+    transition: all .1s ease-out !important;
+    -webkit-transition: all 0.1s ease-out !important;
+    -ms-transition: all 0.1s ease-out !important;
+}
+.fz-fab-buttons.fz-fab-secondary img{
+    width: 48px !important;
+    height: 48px !important;
+    border-radius: 50% !important;
+}
+.fz-fab-active .fz-fab-buttons.fz-fab-secondary{
+    transform: none !important;
+    -webkit-transform: none !important;
+    -ms-transform: none !important;
+    opacity: 1 !important;
+    margin: 7px auto 0px !important;
+}
+.fz-fab-box{
+    width: auto !important; 
+    height: auto !important; 
+    min-width: 320px !important; 
+    min-height: 320px !important; 
+    max-width: 460px !important; 
+    max-height: auto !important; 
+    background-color: #fff !important; 
+    position: fixed !important; 
+    z-index: 9999999999 !important; 
+    box-shadow: -3px 20px 20px 0px rgba(0, 0, 0, 0.1) !important; 
+    overflow: hidden !important;
+    display: none;
+} 
+@media (max-width: 460px){
+    .fz-fab-box{
+        width: 100% !important; 
+        height: 100% !important;
+        min-width: 100% !important; 
+        min-height: 100% !important; 
+        top: 0 !important;
+        bottom: 0 !important;
+        left: 0 !important;
+        right: 0 !important;
+    } 
+}
+.fz-fab-box-head{
+    line-height: 40px !important; 
+    vertical-align: middle !important;
+    padding: 0px 15px !important;
+}
+.fz-fab-box-hide{
+    /* float:right !important;  */
+    display: inline-block !important; 
+    opacity: 0.7 !important;
+}
+.fz-fab-box-hide:hover{
+    cursor: pointer !important;
+    opacity: 1 !important;
+}
+         
+     </style>
+    </head>
+    <body>
+        <header>
+            <h2 href="#"> Blood Alms</h2>
+            <nav>
+               <li><a href="#">Home</a> </li> 
+                <li><a href="#">Who are we?</a> </li>
+                <li><a href="#">Contact us</a> </li>
+                
+            </nav>
+            </header>
+            
+            <section class="hero">
+            <div class="background-image" style="background-image:url(https://e1.pxfuel.com/desktop-wallpaper/16/739/desktop-wallpaper-blood-bank-blood-donation.jpg)"></div>
+                <div class="hero-content-area">
+                <h1>Blood Alms</h1>
+                    <h3>Once a blood donar,always a lifesaver</h3>
+                <a href="#" class="btn">Donate blood</a>
+                <a href="#" class="btn">In need of blood</a>
+                </div>
+                
+            </section>
+        
+        <section class="destinations">
+            <h2 class="elementor-heading-title elementor-size-default">Why should I donate blood?</h2>		</div>
+
+                </div>
+            </div>
+</div>
+        
+                        <div class="elementor-text-editor elementor-clearfix">
+        Safe blood saves lives and improves health. Blood transfusion is needed for:					</div>
+                </div>
+        </div>
+    
+    
+            <ul class="elementor-icon-list-items">
+                    <li class="elementor-icon-list-item">
+                                    
+                    <i aria-hidden="true" class="fas fa-female"></i>						
+                                <span class="elementor-icon-list-text">Women with complications of pregnancy, such as ectopic pregnancies and haemorrhage before, during or after childbirth;</span>
+                            </li>
+                        <li >
+                        
+                    <i aria-hidden="true" class="fas fa-child"></i>						</span>
+                                <span class="elementor-icon-list-text">children with severe anaemia often resulting from malaria or malnutrition;</span>
+                            </li>
+                        <li">
+                    <i aria-hidden="true" class="fas fa-brain"></i>						</span>
+                                <span class="elementor-icon-list-text">People with severe trauma following man-made and natural disasters; </span>
+                            </li>
+                        <li>
+                    <i aria-hidden="true" class="fas fa-briefcase-medical"></i>						</span>
+                                <span class="elementor-icon-list-text">Many complex medical and surgical procedures and cancer patients.</span>
+                            </li>
+                </ul>
+        </div>
+        </div>
+        <div class="elementor-element elementor-element-b34204e elementor-widget elementor-widget-text-editor" data-id="b34204e" data-element_type="widget" data-widget_type="text-editor.default">
+        <div class="elementor-widget-container">
+                        <div class="elementor-text-editor elementor-clearfix">
+        
+It is also needed for regular transfusions for people with conditions such as thalassaemia and sickle cell disease and is used to make products such as clotting factors for people with haemophilia.
+
+There is a constant need for regular blood supply because blood can be stored for only a limited time before use. Regular blood donations by a sufficient number of healthy people are needed to ensure that safe blood will be available whenever and wherever it is needed.<br>
+
+Blood is the most precious gift that anyone can give to another person — the gift of life. A decision to donate your blood can save a life, or even several if your blood is separated into its components — red cells, platelets and plasma — which can be used individually for patients with specific conditions					</div>
+                </div>
+        </div>
+        <div class="elementor-element elementor-element-d8ccd10 elementor-mobile-align-center elementor-align-right elementor-widget elementor-widget-button" data-id="d8ccd10" data-element_type="widget" data-widget_type="button.default">
+        <div class="elementor-widget-container">
+            <div class="elementor-button-wrapper">
+    <a href="#" class="elementor-button-link elementor-button elementor-size-md" role="button">
+                <span class="elementor-button-content-wrapper">
+                <span class="elementor-button-icon elementor-align-icon-right">
+        <i aria-hidden="true" class="fas fa-caret-right"></i>			</span>
+                <span class="elementor-button-text">Know More</span>
+</span>
+            </a>
+</div>
+        </div>
+        </div>
+             
+</section>
+                </div>
+            </div>
+</div>
+                        </div>
+            </div>
+</section>
+        <section class="elementor-section elementor-top-section elementor-element elementor-element-67a25b0 elementor-section-content-middle elementor-section-boxed elementor-section-height-default elementor-section-height-default" data-id="67a25b0" data-element_type="section" id="download">
+                <div class="elementor-container elementor-column-gap-wider">
+                    <div class="elementor-row">
+            <div class="elementor-column elementor-col-50 elementor-top-column elementor-element elementor-element-8c679ad" data-id="8c679ad" data-element_type="column">
+    <div class="elementor-column-wrap elementor-element-populated">
+                    <div class="elementor-widget-wrap">
+                <div class="elementor-element elementor-element-03a325b elementor-widget__width-initial elementor-view-default elementor-vertical-align-top elementor-widget elementor-widget-icon-box" data-id="03a325b" data-element_type="widget" data-widget_type="icon-box.default">
+        <div class="elementor-widget-container">
+            <div class="elementor-icon-box-wrapper">
+                <div class="elementor-icon-box-content">
+        <h2 class="elementor-icon-box-title">
+            <span  >
+                ABOUT					</span>
+        </h2>
+                            <p class="elementor-icon-box-description">
+                If each blood donation saves up to three lives, imagine how many you can save at your own blood drive. Hosting a blood drive gives you the chance to get your whole community involved and make an even bigger impact on the lives of others.					</p>
+                    </div>
+</div>
+        </div>
+        </div>
+        <section class="elementor-section elementor-inner-section elementor-element elementor-element-5b377bd elementor-section-boxed elementor-section-height-default elementor-section-height-default" data-id="5b377bd" data-element_type="section">
+                <div class="elementor-container elementor-column-gap-default">
+                    <div class="elementor-row">
+            <div class="elementor-column elementor-col-100 elementor-inner-column elementor-element elementor-element-5f772d1" data-id="5f772d1" data-element_type="column">
+    <div class="elementor-column-wrap elementor-element-populated">
+                    <div class="elementor-widget-wrap">
+                <div class="elementor-element elementor-element-2eb67df elementor-mobile-align-center elementor-align-left elementor-widget elementor-widget-button" data-id="2eb67df" data-element_type="widget" data-widget_type="button.default">
+        <div class="elementor-widget-container">
+            <div class="elementor-button-wrapper">
+    <a href="#" class="elementor-button-link elementor-button elementor-size-md" role="button">
+                <span class="elementor-button-content-wrapper">
+                <span class="elementor-button-icon elementor-align-icon-left">
+        <i aria-hidden="true" class="fas fa-long-arrow-alt-right"></i>			</span>
+                <span class="elementor-button-text">Know More</span>
+</span>
+            </a>
+</div>
+        </div>
+        </div>
+                </div>
+            </div>
+</div>
+                        </div>
+            </div>
+</section>
+                </div>
+            </div>
+</div>
+        <div class="elementor-column elementor-col-50 elementor-top-column elementor-element elementor-element-69ba6b0" data-id="69ba6b0" data-element_type="column">
+    <div class="elementor-column-wrap elementor-element-populated">
+                    <div class="elementor-widget-wrap">
+                <div class="elementor-element elementor-element-f2727ba elementor-invisible elementor-widget elementor-widget-image" data-id="f2727ba" data-element_type="widget" data-settings="{&quot;_animation&quot;:&quot;fadeInUp&quot;,&quot;_animation_delay&quot;:400}" data-widget_type="image.default">
+        <div class="elementor-widget-container">
+                        <div class="elementor-image">
+               
+                </div>
+        </div>
+                </div>
+            </div>
+</div>
+                        </div>
+            </div>
+</section>
+        <section class="elementor-section elementor-top-section elementor-element elementor-element-3e1dd54 elementor-section-boxed elementor-section-height-default elementor-section-height-default" data-id="3e1dd54" data-element_type="section" data-settings="{&quot;background_background&quot;:&quot;classic&quot;}">
+                    <div class="elementor-background-overlay"></div>
+                    <div class="elementor-container elementor-column-gap-default">
+                    <div class="elementor-row">
+            <div class="elementor-column elementor-col-50 elementor-top-column elementor-element elementor-element-76bdd6a" data-id="76bdd6a" data-element_type="column">
+    <div class="elementor-column-wrap elementor-element-populated">
+                    <div class="elementor-widget-wrap">
+                <div class="elementor-element elementor-element-4f1721c elementor-position-top elementor-vertical-align-top elementor-widget elementor-widget-image-box" data-id="4f1721c" data-element_type="widget" data-widget_type="image-box.default">
+        <div class="elementor-widget-container">
+    <div class="elementor-image-box-wrapper"><div class="elementor-image-box-content"><h2 class="elementor-image-box-title">TIPS TO MAKE YOUR BLOOD DRIVE SUCCESSFUL</h2></div></div>		</div>
+        </div>
+        <div class="elementor-element elementor-element-b173ad0 elementor-widget elementor-widget-image" data-id="b173ad0" data-element_type="widget" data-widget_type="image.default">
+        <div class="elementor-widget-container">
+               
+                </div>
+        </div>
+                </div>
+            </div>
+</div>
+        <div class="elementor-column elementor-col-50 elementor-top-column elementor-element elementor-element-65c51ee" data-id="65c51ee" data-element_type="column">
+    <div class="elementor-column-wrap elementor-element-populated">
+                    <div class="elementor-widget-wrap">
+                <div class="elementor-element elementor-element-2eaa248 elementor-widget elementor-widget-eael-feature-list" data-id="2eaa248" data-element_type="widget" data-widget_type="eael-feature-list.default">
+        <div class="elementor-widget-container">
+            <div class="-icon-position-left -tablet-icon-position-left -mobile-icon-position-left">
+    <ul id="eael-feature-list-2eaa248" class="eael-feature-list-items circle stacked ">
+                    <li class="eael-feature-list-item elementor-repeater-item-c00b0ad">
+            
+                <div class="eael-feature-list-icon-box">
+                    <div class="eael-feature-list-icon-inner">
+
+                        <span class="eael-feature-list-icon fl-icon-0">
+
+<i aria-hidden="true" class="fas fa-arrow-right"></i>								</span>
+                    </div>
+                </div>
+                <div class="eael-feature-list-content-box">
+                    <h4 class="eael-feature-list-title"							>Set a Goal</h4						>
+                <p class="eael-feature-list-content">Determine a reasonable amount of donors you hope show up to give.</p>
+                </div>
+
+            </li>
+                        <li class="eael-feature-list-item elementor-repeater-item-d7f94e7">
+            
+                <div class="eael-feature-list-icon-box">
+                    <div class="eael-feature-list-icon-inner">
+
+                        <span class="eael-feature-list-icon fl-icon-1">
+
+<i aria-hidden="true" class="far fa-clock"></i>								</span>
+                    </div>
+                </div>
+                <div class="eael-feature-list-content-box">
+                    <h4 class="eael-feature-list-title"							>Plan Early</h4						>
+                <p class="eael-feature-list-content">Along with you Blood-Donor consultant, begin working on the details of your drive and handing out the provided marketing materials.</p>
+                </div>
+
+            </li>
+                        <li class="eael-feature-list-item elementor-repeater-item-74c57cc">
+            
+                <div class="eael-feature-list-icon-box">
+                    <div class="eael-feature-list-icon-inner">
+
+                        <span class="eael-feature-list-icon fl-icon-2">
+
+<i aria-hidden="true" class="fab fa-audible"></i>								</span>
+                    </div>
+                </div>
+                <div class="eael-feature-list-content-box">
+                    <h4 class="eael-feature-list-title"							>Spread the Word</h4						>
+                <p class="eael-feature-list-content">Through signs, word-of-mouth, emails and more, let others near you know what is going on.</p>
+                </div>
+
+            </li>
+                        <li class="eael-feature-list-item elementor-repeater-item-232177b">
+            
+                <div class="eael-feature-list-icon-box">
+                    <div class="eael-feature-list-icon-inner">
+
+                        <span class="eael-feature-list-icon fl-icon-3">
+
+<i aria-hidden="true" class="fas fa-user-lock"></i>								</span>
+                    </div>
+                </div>
+                <div class="eael-feature-list-content-box">
+                    <h4 class="eael-feature-list-title"							>Start Signing Up Donors</h4						>
+                <p class="eael-feature-list-content">Through signs, word-of-mouth, emails and more, let others near you know what is going on.</p>
+                </div>
+
+            </li>
+                        <li class="eael-feature-list-item elementor-repeater-item-fb8760d">
+            
+                <div class="eael-feature-list-icon-box">
+                    <div class="eael-feature-list-icon-inner">
+
+                        <span class="eael-feature-list-icon fl-icon-4">
+
+<i aria-hidden="true" class="fas fa-users"></i>								</span>
+                    </div>
+                </div>
+                <div class="eael-feature-list-content-box">
+                    <h4 class="eael-feature-list-title"							>Get a Group Involved</h4						>
+                <p class="eael-feature-list-content">Get people to help you set up and get others excited. Have your team help you come up with unique ways to make your drive even more fun.</p>
+                </div>
+
+            </li>
+                        <li class="eael-feature-list-item elementor-repeater-item-20d0688">
+            
+                <div class="eael-feature-list-icon-box">
+                    <div class="eael-feature-list-icon-inner">
+
+                        <span class="eael-feature-list-icon fl-icon-5">
+
+<i aria-hidden="true" class="fas fa-medal"></i>								</span>
+                    </div>
+                </div>
+                <div class="eael-feature-list-content-box">
+                    <h4 class="eael-feature-list-title"							>Show your Appreciation</h4						>
+                <p class="eael-feature-list-content">At your drive, make sure every donor knows how much it means to you that they show up.</p>
+                </div>
+
+            </li>
+                        <li class="eael-feature-list-item elementor-repeater-item-33e42dd">
+            
+                <div class="eael-feature-list-icon-box">
+                    <div class="eael-feature-list-icon-inner">
+
+                        <span class="eael-feature-list-icon fl-icon-6">
+
+<i aria-hidden="true" class="fas fa-hands-helping"></i>								</span>
+                    </div>
+                </div>
+                <div class="eael-feature-list-content-box">
+                    <h4 class="eael-feature-list-title"							>We’re Here to Help</h4						>
+                <p class="eael-feature-list-content">If you have any questions during the process, your Blood-Donor consultant will be ready to help guide you and give you all you need to achieve success.</p>
+                </div>
+
+            </li>
+                    </ul>
+</div>
+        </div>
+        </div>
+                </div>
+            </div>
+</div>
+                        </div>
+            </div>
+</section>
+        <section class="elementor-section elementor-top-section elementor-element elementor-element-8d2c997 elementor-section-boxed elementor-section-height-default elementor-section-height-default" data-id="8d2c997" data-element_type="section">
+                <div class="elementor-container elementor-column-gap-default">
+                    <div class="elementor-row">
+            <div class="elementor-column elementor-col-100 elementor-top-column elementor-element elementor-element-af03ff1" data-id="af03ff1" data-element_type="column">
+    <div class="elementor-column-wrap elementor-element-populated">
+                    <div class="elementor-widget-wrap">
+                <div class="elementor-element elementor-element-3fedc99 elementor-position-top elementor-vertical-align-top elementor-widget elementor-widget-image-box" data-id="3fedc99" data-element_type="widget" data-widget_type="image-box.default">
+        <div class="elementor-widget-container">
+                            </div>
+            </div>
+</section>
+        <section class="elementor-section elementor-top-section elementor-element elementor-element-77f304e elementor-section-content-middle elementor-section-boxed elementor-section-height-default elementor-section-height-default" data-id="77f304e" data-element_type="section" data-settings="{&quot;background_background&quot;:&quot;classic&quot;}">
+                <div class="elementor-container elementor-column-gap-default">
+                    <div class="elementor-row">
+            <div class="elementor-column elementor-col-100 elementor-top-column elementor-element elementor-element-5669a86" data-id="5669a86" data-element_type="column">
+    <div class="elementor-column-wrap elementor-element-populated">
+                    <div class="elementor-widget-wrap">
+                <section class="elementor-section elementor-inner-section elementor-element elementor-element-82bd92d elementor-section-boxed elementor-section-height-default elementor-section-height-default" data-id="82bd92d" data-element_type="section">
+                <div class="elementor-container elementor-column-gap-default">
+                    <div class="elementor-row">
+            <div class="elementor-column elementor-col-50 elementor-inner-column elementor-element elementor-element-a1ea1de" data-id="a1ea1de" data-element_type="column">
+    <div class="elementor-column-wrap elementor-element-populated">
+                    <div class="elementor-widget-wrap">
+                <div class="elementor-element elementor-element-1e816dd elementor-widget elementor-widget-heading" data-id="1e816dd" data-element_type="widget" data-widget_type="heading.default">
+        <div class="elementor-widget-container">
+    <h4 class="elementor-heading-title elementor-size-default">14 Reasons</h4>		</div>
+        </div>
+        <div class="elementor-element elementor-element-7b782ae elementor-position-top elementor-vertical-align-top elementor-widget elementor-widget-image-box" data-id="7b782ae" data-element_type="widget" data-widget_type="image-box.default">
+        <div class="elementor-widget-container">
+    <div class="elementor-image-box-wrapper"><div class="elementor-image-box-content"><h2 class="elementor-image-box-title">Why You Should Give Blood​</h2></div></div>		</div>
+        </div>
+        <div class="elementor-element elementor-element-62ecb9c elementor-widget elementor-widget-image" data-id="62ecb9c" data-element_type="widget" data-widget_type="image.default">
+        <div class="elementor-widget-container">
+                        <div class="elementor-image">
+                                        <img width="1024" height="706" src="https://blood-donor.in/wp-content/uploads/2020/12/volunteer-hands-help-2055042-1024x706.jpg" class="attachment-large size-large" alt="volunteer, hands, help" loading="lazy" srcset="https://blood-donor.in/wp-content/uploads/2020/12/volunteer-hands-help-2055042-1024x706.jpg 1024w, https://blood-donor.in/wp-content/uploads/2020/12/volunteer-hands-help-2055042-300x207.jpg 300w, https://blood-donor.in/wp-content/uploads/2020/12/volunteer-hands-help-2055042-768x529.jpg 768w, https://blood-donor.in/wp-content/uploads/2020/12/volunteer-hands-help-2055042.jpg 1280w" sizes="(max-width: 1024px) 100vw, 1024px" />														</div>
+                </div>
+        </div>
+                </div>
+            </div>
+</div>
+        <div class="elementor-column elementor-col-50 elementor-inner-column elementor-element elementor-element-0e4e965" data-id="0e4e965" data-element_type="column">
+    <div class="elementor-column-wrap elementor-element-populated">
+                    <div class="elementor-widget-wrap">
+                <div class="elementor-element elementor-element-b9d098c elementor-icon-list--layout-traditional elementor-list-item-link-full_width elementor-widget elementor-widget-icon-list" data-id="b9d098c" data-element_type="widget" data-widget_type="icon-list.default">
+        <div class="elementor-widget-container">
+            <ul class="elementor-icon-list-items">
+                    <li class="elementor-icon-list-item">
+                                <span class="elementor-icon-list-text"><strong>1.</strong> &nbsp;It saves lives — what else do you need to know?</span>
+                            </li>
+                        <li class="elementor-icon-list-item">
+                                <span class="elementor-icon-list-text"><strong>2.</strong>&nbsp;It is not more painful than losing a loved one that you may save by donating!</span>
+                            </li>
+                        <li class="elementor-icon-list-item">
+                                <span class="elementor-icon-list-text"><strong>3.</strong>&nbsp;It is your civic duty.</span>
+                            </li>
+                        <li class="elementor-icon-list-item">
+                                <span class="elementor-icon-list-text"><strong>4.</strong>&nbsp;Because I know too many people who can’t give blood.</span>
+                            </li>
+                        <li class="elementor-icon-list-item">
+                                <span class="elementor-icon-list-text"><strong>5.</strong>&nbsp;Because some day, I may need someone to do the same for me.</span>
+                            </li>
+                        <li class="elementor-icon-list-item">
+                                <span class="elementor-icon-list-text"><strong>6.</strong>&nbsp;Do unto others, as you would have them do unto you!</span>
+                            </li>
+                        <li class="elementor-icon-list-item">
+                                <span class="elementor-icon-list-text"><strong>7.</strong>&nbsp;Because if you need blood one day, you would not hesitate to take it, so why would you hesitate to give it?</span>
+                            </li>
+                        <li class="elementor-icon-list-item">
+                                <span class="elementor-icon-list-text"><strong>8.</strong>&nbsp;Blood donation is important because maintaining an adequate blood supply in our community secures blood transfusions for patients.</span>
+                            </li>
+                        <li class="elementor-icon-list-item">
+                                <span class="elementor-icon-list-text"><strong>9.</strong>&nbsp;Because I can.</span>
+                            </li>
+                        <li class="elementor-icon-list-item">
+                                <span class="elementor-icon-list-text"><strong>10.</strong>&nbsp;Nutter Butters.</span>
+                            </li>
+                        <li class="elementor-icon-list-item">
+                                <span class="elementor-icon-list-text"><strong>11.</strong>&nbsp;The question is, why not give blood?</span>
+                            </li>
+                        <li class="elementor-icon-list-item">
+                                <span class="elementor-icon-list-text"><strong>12.</strong>&nbsp;It gives donors a medical check at no cost. </span>
+                            </li>
+                        <li class="elementor-icon-list-item">
+                                <span class="elementor-icon-list-text"><strong>13.</strong>&nbsp; Free cookies, juice and the satisfaction of helping others.</span>
+                            </li>
+                        <li class="elementor-icon-list-item">
+                                <span class="elementor-icon-list-text"><strong>14.</strong>&nbsp;I can’t discover a cure for cancer, but I can help keep someone alive while they are waiting for a cure.</span>
+                            </li>
+                </ul>
+        </div>
+        </div>
+                </div>
+            </div>
+</div>
+                        </div>
+            </div>
+</section>
+                </div>
+            </div>
+</div>
+                        </div>
+            </div>
+</section>
+        <section class="elementor-section elementor-top-section elementor-element elementor-element-b94fd2c elementor-section-boxed elementor-section-height-default elementor-section-height-default" data-id="b94fd2c" data-element_type="section">
+                <div class="elementor-container elementor-column-gap-default">
+                    <div class="elementor-row">
+            <div class="elementor-column elementor-col-100 elementor-top-column elementor-element elementor-element-3a9d189" data-id="3a9d189" data-element_type="column">
+    <div class="elementor-column-wrap elementor-element-populated">
+                    <div class="elementor-widget-wrap">
+                <div class="elementor-element elementor-element-4e6fc0b elementor-position-top elementor-vertical-align-top elementor-widget elementor-widget-image-box" data-id="4e6fc0b" data-element_type="widget" data-widget_type="image-box.default">
+        <div class="elementor-widget-container">
+     </div>
+            </div>
+</section>
+                </div>
+                </div>
+            </div>
+
+
+
+</div><!-- .entry-content .clear -->
+
+
+
+</article><!-- #post-## -->
+
+
+            
+            
+        
+    </main><!-- #main -->
+    
+
+</div><!-- #primary -->
+
+
+    
+    </div> <!-- ast-container -->
+
+</div><!-- #content -->
+
+
+
+        
+</div>   
+<section class="contact">
+    <h3 class="title">Join our newsletter</h3>	
+    <p>Information will go here(if any)</p>
+    <hr>
+
+    <form>
+        <input type="email" placeholder="Email">
+        <a href="#" class="btn">Subscribe now</a>
+    </form>
+</section>
+
+<footer>
+    <ul>
+        <li><a href="#"><i class="fa fa-twitter-square"></i></a></li>
+        <li><a href="#"><i class="fa fa-facebook-square"></i></a></li>
+        <li><a href="#"><i class="fa fa-snapchat-square"></i></a></li>
+        <li><a href="#"><i class="fa fa-pinterest-square"></i></a></li>
+        <li><a href="#"><i class="fa fa-github-square"></i></a></li>
+    </ul>
+    <p>Made by Pardeep Singh</p>
+    <p>No attribution required. you can remove this footer.</p>
+</footer>
+    
+</body>
+</html>

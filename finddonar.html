@@ -1,0 +1,547 @@
+<html>
+  <head><title>Blood Alms</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+    <link rel="icon" href="blood-alms-low-resolution-logo-black-on-white-background.png" type="image/icon type">
+    <style>
+      .register{
+    background-image: url(https://cdn.wallpapersafari.com/9/80/pzcqXQ.png);
+    margin-top: 3%;
+    padding: 3%;
+    background-repeat: no-repeat;
+     background-size: 100000px;
+
+}
+.register-left{
+    text-align: center;
+    color: #fff;
+    margin-top: 4%;
+}
+.register-left input{
+    border: none;
+    border-radius: 1.5rem;
+    padding: 2%;
+    width: 60%;
+    background: #f8f9fa;
+    font-weight: bold;
+    color: #383d41;
+    margin-top: 30%;
+    margin-bottom: 3%;
+    cursor: pointer;
+}
+.register-right{
+    background: #f8f9fa;
+    border-top-left-radius: 10% 50%;
+    border-bottom-left-radius: 10% 50%;
+}
+.register-left img{
+    margin-top: 15%;
+    margin-bottom: 5%;
+    width: 25%;
+    -webkit-animation: mover 2s infinite  alternate;
+    animation: mover 1s infinite  alternate;
+}
+@-webkit-keyframes mover {
+    0% { transform: translateY(0); }
+    100% { transform: translateY(-20px); }
+}
+@keyframes mover {
+    0% { transform: translateY(0); }
+    100% { transform: translateY(-20px); }
+}
+.register-left p{
+    font-weight: lighter;
+    padding: 12%;
+    margin-top: -9%;
+}
+.register .register-form{
+    padding: 10%;
+    margin-top: 10%;
+}
+.btnRegister{
+    
+    margin-top: 10%;
+    border: none;
+    border-radius: 1.5rem;
+    padding: 2%;
+    background: #0062cc;
+    color: #fff;
+    font-weight: 600;
+    width: 50%;
+    cursor: pointer;
+}
+.register .nav-tabs{
+    margin-top: 3%;
+    border: none;
+    background: #0062cc;
+    border-radius: 1.5rem;
+    width: 28%;
+    float: right;
+}
+.register .nav-tabs .nav-link{
+    padding: 2%;
+    height: 34px;
+    font-weight: 600;
+    color: #fff;
+    border-top-right-radius: 1.5rem;
+    border-bottom-right-radius: 1.5rem;
+}
+.register .nav-tabs .nav-link:hover{
+    border: none;
+}
+.register .nav-tabs .nav-link.active{
+    width: 100px;
+    color: #0062cc;
+    border: 2px solid #0062cc;
+    border-top-left-radius: 1.5rem;
+    border-bottom-left-radius: 1.5rem;
+}
+.register-heading{
+    text-align: center;
+    margin-top: 8%;
+    margin-bottom: -15%;
+    color: #495057;
+}* {
+    margin: 0;
+    padding: 0;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+}
+html{
+    font: normal 16px sans-serif;
+    color: #555;
+}
+ul, nav{
+    list-style: none;
+}
+/*nav-bar style*/
+nav{
+    list-style: none;
+}
+a{
+    text-decoration: none;
+    opacity: 0.75;
+    margin: 0 15px;
+    color: rgb(6, 4, 4);
+    cursor: pointer;
+}
+a:hover{
+    opacity: 1;
+}
+a.btn{
+    border-radius: 4px;
+    text-transform: uppercase;
+    font-weight: bold;
+    text-align: center;
+    background-color: #3f51b5;
+    opacity: 1;
+    margin-top: 10px;
+    color: white
+}
+
+
+section{
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    padding: 100px;
+}
+
+/*
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+Header Configurations
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+*/
+
+header{
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 10;
+    width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align:center;
+        -ms-flex-align:center;
+            align-items:center;
+    padding: 35px 100px 0;
+    -webkit-animation: 1s fadein 0.5s forwards;
+            animation: 1s fadein 0.5s forwards;
+    opacity: 0.5;
+    color: white;
+}
+@-webkit-keyframes fadein{
+    100%{
+        opacity: 1;
+    }
+}
+@keyframes fadein{
+    100%{
+        opacity: 1;
+    }
+}
+
+header h2{
+    font-family: "Quicksand, sans-serif";
+    color: white;
+}
+
+header nav{
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    margin-right: -15px;
+}
+header nav li{
+    margin: 0 15px;
+    color: white;
+}
+@media (max-width: 1000px){
+	header{
+		padding: 20px 50px;
+	}
+}
+
+
+@media (max-width: 700px){
+	header{
+		-webkit-box-orient: vertical;
+		-webkit-box-direction: normal;
+		    -ms-flex-direction: column;
+		        flex-direction: column;		
+	}
+
+	header h2{
+		margin-bottom: 15px;
+	}
+}
+
+
+
+/*
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+Cover and Image Animation configuration
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+*/
+.hero{
+    position: relative;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    text-align: center;
+    min-height: 100vh;
+    color: white;
+}
+.hero .background-image{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    z-index: -1;
+    background-color: #80a3db;
+    -webkit-animation: 15s change 1s forwards;
+            animation: 15s change 1s forwards;
+    -webkit-animation-iteration-count:infinite;
+            animation-iteration-count:infinite;
+}
+
+@keyframes change{
+    /* 0%{
+    background-image: url(https://c1.wallpaperflare.com/preview/684/332/850/balloons-colorful-blue-sky.jpg);
+    }
+    25%{
+       background-image: url(https://c1.wallpaperflare.com/preview/684/332/850/balloons-colorful-blue-sky.jpg);
+    }
+    50%{
+        background-image: url(https://e0.pxfuel.com/wallpapers/761/94/desktop-wallpaper-blood-types-and-to-whom-you-can-donate-donation-thumbnail.jpg);
+        
+    } */
+    /* 75%{
+        background-image: url(https://thumbs.dreamstime.com/b/aerial-view-lago-antorno-dolomites-lake-mountain-landscape-alps-peak-misurina-cortina-di-ampezzo-italy-reflected-103752677.jpg);
+        
+    }
+    100%{
+        background-image: url(https://thumbs.dreamstime.com/b/aerial-view-lago-antorno-dolomites-lake-mountain-landscape-alps-peak-misurina-cortina-di-ampezzo-italy-reflected-103752677.jpg);
+        
+    } */
+}
+.hero h1{
+    font: bold 60px "Open Sans", sans-serif;
+    margin-bottom: 40px;
+    color: white;
+}
+.hero h3{
+    font: normal 28px "Open Sans", sans-serif;
+    margin-bottom: 40px;
+    color: white;
+}
+.hero a.btn{
+    padding: 20px 46px;
+}
+.hero-content-area{
+    opacity: 0;
+    margin-top: 100px;
+    -webkit-animation: 1s slidefade 1s forwards;
+            animation: 1s slidefade 1s forwards;
+}
+@-webkit-keyframes slidefade{
+    100%{
+        opacity: 1;
+        margin: 0;
+    }
+}
+@keyframes slidefade{
+    100%{
+        opacity: 1;
+        margin: 0;
+    }
+}
+
+
+.grid{
+    width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+}
+
+/* hr{
+    width: 100%;
+    height: 2px;
+    background-color: #3f51b5;
+    border: 0;
+    margin-bottom: 50px;
+} */
+
+
+
+@media (max-width: 800px){
+
+	.hero{
+		min-height: 600px;
+	}
+	.hero h1{
+		font-size: 48px;
+	}
+
+	.hero h3{
+		font-size: 24px;
+	}
+
+	.hero a.btn{
+		padding: 15px 40px;
+	}
+
+}
+
+
+/*
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!1
+Section Configurations
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+*/
+section h3.title{
+    text-transform: capitalize;
+    font: bold 32px "Open Sans", sans-serif;
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+
+.destinations .grid li{
+    height: 350px;
+    padding: 20px;
+    background-clip: content-box;
+    background-size: cover;
+    background-position: center;
+}
+
+.destinations .grid li.small{
+    -ms-flex-preferred-size: 30%;
+        flex-basis: 30%;
+}
+
+.destnations .grid li.large{
+    -ms-flex-preferred-size: 70%;
+        flex-basis: 70%;
+}
+
+
+
+
+
+
+
+/*---------------------
+ 	Contact Section
+---------------------*/
+
+.contact{
+	background-color: #f7f7f7;
+}
+
+.contact form{
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-align: center;
+	    -ms-flex-align: center;
+	        align-items: center;
+	-webkit-box-pack: center;
+	    -ms-flex-pack: center;
+	        justify-content: center;
+	-ms-flex-wrap: wrap;
+	    flex-wrap: wrap;
+
+	max-width: 800px;
+	width: 80%;
+}
+
+.contact form input{
+	padding: 15px;
+	-webkit-box-flex: 1;
+	    -ms-flex: 1;
+	        flex: 1;
+	margin-right: 30px;
+	font-size: 18px;
+	color: #555;
+}
+
+.contact form .btn{
+	padding: 18px 42px;
+}
+
+
+@media (max-width: 800px){
+
+	.contact form input{
+		-ms-flex-preferred-size: 100%;
+		    flex-basis: 100%;
+		margin: 0 0 20px 0;
+	}
+
+}
+
+    </style>
+  </head>
+
+
+<!------ Include the above in your HEAD tag ---------->
+<header>
+    <div class="logo">
+        <a href="home1.html"><img width="40px" height="40px" src="blood-alms-low-resolution-logo-black-on-white-background.png"></a>
+      </div><h2 href="#" style="color: black;"> Blood Alms</h2>
+    <nav>
+        
+       <li style="color: black;"><a href="home1.html" style="color: black;">Home</a> </li> 
+        <li style="color: black;"><a href="whorwe.html" style="color: black;">Who are we</a> </li>
+        <li style="color: black;"><a href="howitworks.html" style="color: black;">How it works</a> </li>
+        <!-- <li style="color: black;"><a href="whocangetmyblood.html" style="color: black;">Who can get my blood</a> </li> -->
+        <li style="color: black;"><a href="whocangetmyblood.html" style="color: black;">Working process</a> </li>
+        <li style="color: black;"><a href="#" style="color: black;">Blood Requests</a> </li>
+        
+    </nav>
+    </header><section><form action="http://localhost:8000/finddonar" method="post">
+<div class="container register">
+                <div class="row">
+                    <div class="col-md-3 register-left">
+                        <img src="blood-alms-low-resolution-logo-black-on-white-background.png" alt=""/>
+                        <h3>Give Your Details here</h3>
+                        <p>Once a donar,always a life saver</p>
+                        <p>Just let’s us know that you’re willing to save lives. We’ll send you blood requests in your locality through Whatsapp.</p>
+                    </div>
+                    <div class="col-md-9 register-right">
+                
+                        <div class="tab-content" id="myTabContent">
+                            <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
+                                <h3 class="register-heading">Find a donar</h3>
+                                <div class="row register-form">
+                                    <div class="col-md-6">
+                                        <div class="form-group">
+                                            <input type="text" class="form-control" placeholder="Patients First Name *" name="pfname" value="" required/>
+                                        </div><br>
+                                        <div class="form-group">
+                                            <input type="text" class="form-control" placeholder="Patients last Name *" name="plname" value="" required/>
+                                        </div><br>
+                                        <div class="form-group">
+                                            <input type="email" class="form-control" placeholder="Email *" name="email" value="" required />
+                                        </div><br>
+                                        <div class="form-group">
+                                            <input type="number" class="form-control" name="phone" minlength="10" maxlength="10" placeholder="Phone number *" value="" required/>
+                                        </div><br>
+                                        <div class="form-group">
+                                          <select class="form-control" name="group">
+                                              <option class="hidden"  selected disabled>Please select your Blood group</option>
+                                              <option value="A+">A+</option>
+                                              <option value="A-">A-</option>
+                                              <option value="B+">B+</option>
+                                              <option value="B-">B-</option>
+                                              <option value="O+">O+</option>
+                                              <option value="O-">O-</option>
+                                              <option value="AB+">AB+</option>
+                                              <option value="AB-">AB-</option>
+                                          </select>
+                                      </div>  
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="form-group">
+                                            <input type="date" class="form-control" placeholder="Date *" name="date" value="" required/>
+                                        </div><br>
+                                        <div class="form-group">
+                                            <input type="text" class="form-control" name="add" placeholder="Your address *" value="" required></textarea>
+                                        </div>
+                                        <br>
+                                        <!-- <div class="form-group">
+                                            <select class="form-control" name="hiv" required>
+                                                <option class="hidden"  selected disabled>Have you ever tested positive for HIV?</option>
+                                                <option value="Yes">Yes</option>
+                                                <option value="NO">No</option>
+                                        </div>   -->
+                                    <br>
+                                    <div class="form-group"><label>Did u had/have HIV?*</label>
+                                        <input type="text" class="form-control" name="hiv" placeholder=""  value="" required>
+                                    </div><br>
+                                    <div class="form-group"><label>Patients age*<label>
+                                        <input type="number" class="form-control" name="age" placeholder=""  value="" required>
+                                    </div><br></div>
+                                    <div class="form-group"><label>Number of blood bags needed*<label>
+                                        <input type="number" class="form-control" name="bag" placeholder=""  value="" required>
+                                    </div>
+                                    <br>
+                                        <div class="form-group">
+                                         <br><br> <input type="checkbox" required>I have read the terms and service and policy<br>
+                                       <br> </div>
+                                    <center><input type="submit" class="btn btn-primary"  value="Register as a blood donar"/></center>
+                                  </div>
+                           
+                               
+                                </div>
+                                
+                            </div>
+                            
+                        </div>
+                        
+                    </div>
+                </div>
+
+            </div></form>
+        </section>
+            </html>

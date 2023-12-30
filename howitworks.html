@@ -1,0 +1,767 @@
+
+<html>
+    <head>
+        <link rel="icon" href="blood-alms-low-resolution-logo-black-on-white-background.png" type="image/icon type">
+        <title>Blood Alms</title>
+        <style>
+          * {
+    margin: 0;
+    padding: 0;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+}
+html{
+    font: normal 16px sans-serif;
+    color: #555;
+}
+ul, nav{
+    list-style: none;
+}
+/*nav-bar style*/
+nav{
+    list-style: none;
+}
+a{
+    text-decoration: none;
+    opacity: 0.75;
+    margin: 0 15px;
+    color: rgb(6, 4, 4);
+    cursor: pointer;
+}
+a:hover{
+    opacity: 1;
+}
+a.btn{
+    border-radius: 4px;
+    text-transform: uppercase;
+    font-weight: bold;
+    text-align: center;
+    background-color: #3f51b5;
+    opacity: 1;
+    margin-top: 10px;
+    color: white
+}
+
+
+section{
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    padding: 100px;
+}
+
+/*
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+Header Configurations
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+*/
+
+header{
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 10;
+    width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align:center;
+        -ms-flex-align:center;
+            align-items:center;
+    padding: 35px 100px 0;
+    -webkit-animation: 1s fadein 0.5s forwards;
+            animation: 1s fadein 0.5s forwards;
+    opacity: 0.5;
+    color: white;
+}
+@-webkit-keyframes fadein{
+    100%{
+        opacity: 1;
+    }
+}
+@keyframes fadein{
+    100%{
+        opacity: 1;
+    }
+}
+
+header h2{
+    font-family: "Quicksand, sans-serif";
+    color: white;
+}
+
+header nav{
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    margin-right: -15px;
+}
+header nav li{
+    margin: 0 15px;
+    color: white;
+}
+@media (max-width: 1000px){
+	header{
+		padding: 20px 50px;
+	}
+}
+
+
+@media (max-width: 700px){
+	header{
+		-webkit-box-orient: vertical;
+		-webkit-box-direction: normal;
+		    -ms-flex-direction: column;
+		        flex-direction: column;		
+	}
+
+	header h2{
+		margin-bottom: 15px;
+	}
+}
+
+
+
+/*
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+Cover and Image Animation configuration
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+*/
+.hero{
+    position: relative;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    text-align: center;
+    min-height: 100vh;
+    color: white;
+}
+.hero .background-image{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    z-index: -1;
+    background-color: #80a3db;
+    -webkit-animation: 15s change 1s forwards;
+            animation: 15s change 1s forwards;
+    -webkit-animation-iteration-count:infinite;
+            animation-iteration-count:infinite;
+}
+
+@keyframes change{
+    /* 0%{
+    background-image: url(https://c1.wallpaperflare.com/preview/684/332/850/balloons-colorful-blue-sky.jpg);
+    }
+    25%{
+       background-image: url(https://c1.wallpaperflare.com/preview/684/332/850/balloons-colorful-blue-sky.jpg);
+    }
+    50%{
+        background-image: url(https://e0.pxfuel.com/wallpapers/761/94/desktop-wallpaper-blood-types-and-to-whom-you-can-donate-donation-thumbnail.jpg);
+        
+    } */
+    /* 75%{
+        background-image: url(https://thumbs.dreamstime.com/b/aerial-view-lago-antorno-dolomites-lake-mountain-landscape-alps-peak-misurina-cortina-di-ampezzo-italy-reflected-103752677.jpg);
+        
+    }
+    100%{
+        background-image: url(https://thumbs.dreamstime.com/b/aerial-view-lago-antorno-dolomites-lake-mountain-landscape-alps-peak-misurina-cortina-di-ampezzo-italy-reflected-103752677.jpg);
+        
+    } */
+}
+.hero h1{
+    font: bold 60px "Open Sans", sans-serif;
+    margin-bottom: 40px;
+    color: white;
+}
+.hero h3{
+    font: normal 28px "Open Sans", sans-serif;
+    margin-bottom: 40px;
+    color: white;
+}
+.hero a.btn{
+    padding: 20px 46px;
+}
+.hero-content-area{
+    opacity: 0;
+    margin-top: 100px;
+    -webkit-animation: 1s slidefade 1s forwards;
+            animation: 1s slidefade 1s forwards;
+}
+@-webkit-keyframes slidefade{
+    100%{
+        opacity: 1;
+        margin: 0;
+    }
+}
+@keyframes slidefade{
+    100%{
+        opacity: 1;
+        margin: 0;
+    }
+}
+
+
+.grid{
+    width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+}
+
+/* hr{
+    width: 100%;
+    height: 2px;
+    background-color: #3f51b5;
+    border: 0;
+    margin-bottom: 50px;
+} */
+
+
+
+@media (max-width: 800px){
+
+	.hero{
+		min-height: 600px;
+	}
+	.hero h1{
+		font-size: 48px;
+	}
+
+	.hero h3{
+		font-size: 24px;
+	}
+
+	.hero a.btn{
+		padding: 15px 40px;
+	}
+
+}
+
+
+/*
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!1
+Section Configurations
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+*/
+section h3.title{
+    text-transform: capitalize;
+    font: bold 32px "Open Sans", sans-serif;
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+
+.destinations .grid li{
+    height: 350px;
+    padding: 20px;
+    background-clip: content-box;
+    background-size: cover;
+    background-position: center;
+}
+
+.destinations .grid li.small{
+    -ms-flex-preferred-size: 30%;
+        flex-basis: 30%;
+}
+
+.destnations .grid li.large{
+    -ms-flex-preferred-size: 70%;
+        flex-basis: 70%;
+}
+
+
+
+
+
+
+
+/*---------------------
+ 	Contact Section
+---------------------*/
+
+.contact{
+	background-color: #f7f7f7;
+}
+
+.contact form{
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-align: center;
+	    -ms-flex-align: center;
+	        align-items: center;
+	-webkit-box-pack: center;
+	    -ms-flex-pack: center;
+	        justify-content: center;
+	-ms-flex-wrap: wrap;
+	    flex-wrap: wrap;
+
+	max-width: 800px;
+	width: 80%;
+}
+
+.contact form input{
+	padding: 15px;
+	-webkit-box-flex: 1;
+	    -ms-flex: 1;
+	        flex: 1;
+	margin-right: 30px;
+	font-size: 18px;
+	color: #555;
+}
+
+.contact form .btn{
+	padding: 18px 42px;
+}
+
+
+@media (max-width: 800px){
+
+	.contact form input{
+		-ms-flex-preferred-size: 100%;
+		    flex-basis: 100%;
+		margin: 0 0 20px 0;
+	}
+
+}
+body {
+  margin-top: 60px;
+  font-size: 14px;
+  font-family: "Helvetica Nueue", Arial, Verdana, sans-serif;
+  background-color: #E5E9ED;
+}
+
+/* entire container, keeps perspective */
+.card-container {
+  -webkit-perspective: 800px;
+  -moz-perspective: 800px;
+  -o-perspective: 800px;
+  perspective: 800px;
+  margin-bottom: 30px;
+}
+.card-container:hover .card, .card-container.hover .card {
+  -webkit-transform: rotateY(180deg);
+  -moz-transform: rotateY(180deg);
+  -ms-transform: rotateY(180deg);
+  -o-transform: rotateY(180deg);
+  transform: rotateY(180deg);
+}
+.card-container.static:hover .card, .card-container.static.hover .card {
+  -webkit-transform: none;
+  -moz-transform: none;
+  -o-transform: none;
+  transform: none;
+}
+
+/* flip the pane when hovered */
+/* flip speed goes here */
+.card {
+  -webkit-transition: -webkit-transform 0.5s;
+  -moz-transition: -moz-transform 0.5s;
+  -o-transition: -o-transform 0.5s;
+  transition: transform 0.5s;
+  -webkit-transform-style: preserve-3d;
+  -moz-transform-style: preserve-3d;
+  -ms-transform-style: preserve-3d;
+  -o-transform-style: preserve-3d;
+  transform-style: preserve-3d;
+  position: relative;
+}
+
+/* hide back of pane during swap */
+.front, .back {
+  -webkit-backface-visibility: hidden;
+  -moz-backface-visibility: hidden;
+  -o-backface-visibility: hidden;
+  backface-visibility: hidden;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: #FFF;
+  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.14);
+}
+
+/* front pane, placed above back */
+.front {
+  z-index: 2;
+}
+
+/* back, initially hidden pane */
+.back {
+  -webkit-transform: rotateY(180deg);
+  -moz-transform: rotateY(180deg);
+  -ms-transform: rotateY(180deg);
+  -o-transform: rotateY(180deg);
+  transform: rotateY(180deg);
+}
+
+/*        Style*/
+.card {
+  background: none repeat scroll 0 0 #FFFFFF;
+  border-radius: 4px;
+  color: #444444;
+}
+
+.card-container, .front, .back {
+  width: 100%;
+  height: 420px;
+  border-radius: 4px;
+}
+
+.card .cover {
+  height: 105px;
+  overflow: hidden;
+  border-radius: 4px 4px 0 0;
+}
+.card .cover img {
+  width: 100%;
+}
+.card .user {
+  border-radius: 50%;
+  display: block;
+  height: 120px;
+  margin: -55px auto 0;
+  overflow: hidden;
+  width: 120px;
+}
+.card .user img {
+  background: none repeat scroll 0 0 #FFFFFF;
+  border: 4px solid #FFFFFF;
+  width: 100%;
+}
+.card .content {
+  background-color: rgba(0, 0, 0, 0);
+  box-shadow: none;
+  padding: 10px 20px 20px;
+}
+.card .content .main {
+  min-height: 160px;
+}
+.card .back .content .main {
+  height: 215px;
+}
+.card .name {
+  font-size: 22px;
+  line-height: 28px;
+  margin: 10px 0 0;
+  text-align: center;
+  text-transform: capitalize;
+}
+.card h5 {
+  margin: 5px 0;
+  font-weight: 400;
+  line-height: 20px;
+}
+.card .profession {
+  color: #999999;
+  text-align: center;
+  margin-bottom: 20px;
+}
+.card .footer {
+  border-top: 1px solid #EEEEEE;
+  color: #999999;
+  margin: 30px 0 0;
+  padding: 10px 0 0;
+  text-align: center;
+}
+.card .footer .social-links {
+  font-size: 18px;
+}
+.card .footer .social-links a {
+  margin: 0 7px;
+}
+.card .header {
+  padding: 15px 20px;
+  height: 90px;
+}
+.card .motto {
+  border-bottom: 1px solid #EEEEEE;
+  color: #999999;
+  font-size: 14px;
+  font-weight: 400;
+  padding-bottom: 10px;
+  text-align: center;
+}
+
+/*      Just for presentation*/
+.title {
+  color: #506A85;
+  text-align: center;
+  font-weight: 300;
+  font-size: 44px;
+  margin-bottom: 90px;
+  line-height: 90%;
+}
+.title small {
+  font-size: 17px;
+  color: #999;
+  text-transform: uppercase;
+  margin: 0;
+}
+
+.space-50 {
+  height: 50px;
+  display: block;
+}
+
+.space-200 {
+  height: 200px;
+  display: block;
+}
+
+.white-board {
+  background-color: #FFFFFF;
+  min-height: 200px;
+  padding: 60px 60px 20px;
+}
+
+.ct-heart {
+  color: #F74933;
+}
+
+pre.prettyprint {
+  background-color: #ffffff;
+  border: 1px solid #999;
+  margin-top: 20px;
+  padding: 20px;
+  text-align: left;
+}
+
+.atv, .str {
+  color: #05AE0E;
+}
+
+.tag, .pln, .kwd {
+  color: #3472F7;
+}
+
+.atn {
+  color: #2C93FF;
+}
+
+.pln {
+  color: #333;
+}
+
+.com {
+  color: #999;
+}
+
+
+        </style>
+    </head>
+    <body>
+        <header>
+            <div class="logo">
+                <a href="home1.html"><img width="80px" height="80px" src="blood-alms-low-resolution-logo-black-on-white-background.png"></a>
+              </div><h2 href="#" style="color: black;"> Blood Alms</h2>
+        <nav>
+                
+               <li style="color: black;"><a href="home1.html" style="color: black;">Home</a> </li> 
+                <li style="color: black;"><a href="whorwe.html" style="color: black;">Who are we</a> </li>
+                <li style="color: black;"><a href="howitworks.html" style="color: black;">How it works</a> </li>
+                <li style="color: black;"><a href="whocangetmyblood.html" style="color: black;">Working process</a> </li> 
+                <li style="color: black;"><a href="bloodrequest.html" style="color: black;">Blood Requests</a> </li>
+                
+            </nav>
+            </header><br><br><br> <section>     
+           <div class="container">
+  <div class="row">
+    <h1 class="title">
+      Blood Alms<br /><small>Once a blood donar always a lifesaver</small>
+    </h1>
+    <div class="col-sm-10 col-sm-offset-1">
+      <div class="col-md-4 col-sm-6">
+        <div class="card-container">
+          <div class="card">
+            <div class="front">
+              <div class="cover">
+                <img src="https://media.istockphoto.com/photos/contact-means-icons-on-digital-3d-room-background-picture-id518700486?k=6&m=518700486&s=612x612&w=0&h=0he5WeWsddEly0xzGV4ud7mCUFTqBrNxSJgs4gRsXP4=" />
+              </div>
+              <!-- <div class="user">
+                <img class="img-circle" src="https://ct-freebies.herokuapp.com/images/rotating_card_profile3.png" />
+              </div> -->
+              <div class="content">
+                <div class="main">
+                  <h3 class="name">
+                    Blood Alms
+                  </h3>
+                  <p class="profession">
+                    A NGO
+                  </p>
+                  <h5>
+                   <center> <i class="fa fa-map-marker fa-fw text-muted"></i>Contact</center>
+                  </h5>
+                </div>
+                <div class="footer">
+                  <div class="rating">
+                    <i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!--end front panel-->
+            <div class="back">
+              <div class="header">
+                <h5 class="motto">
+                  "The best way to find yourself is to lose yourself in the service of others."
+                </h5>
+              </div>
+              <div class="content">
+                <div class="main">
+                  <h4 class="text-center">
+                    Any queries<br><br><br>
+                  </h4>
+                  <p>
+                    Email us at help@blood-donor.in or Call 8790557100 to get started. Our consultants will help you select a date and location for your drive to take place. From there, they will walk you through the entire process, from helping you fill out the right paperwork to tips on how to get more people involved.
+                  </p>
+                </div>
+              </div>
+              <div class="footer">
+                <div class="social-links text-center">
+                  <a class="facebook" href="http://cretive-tim.com"><i class="fa fa-facebook fa-fw"></i></a><a class="google" href="http://cretive-tim.com"><i class="fa fa-google-plus fa-fw"></i></a><a class="twitter" href="http://cretive-tim.com"><i class="fa fa-twitter fa-fw"></i></a>
+                </div>
+              </div>
+            </div>
+            <!--end back panel-->
+          </div>
+          <!--end card-->
+        </div>
+        <!--end card-container-->
+      </div>
+      <!--end col-md-4 col-sm-6-->
+      <div class="col-md-4 col-sm-6">
+        <div class="card-container">
+          <div class="card">
+            <div class="front">
+              <div class="cover">
+                <img src="https://www.rd.com/wp-content/uploads/2019/05/food-healthy.jpg" />
+              </div>
+              <!-- <div class="user">
+                <img class="img-circle" src="https://ct-freebies.herokuapp.com/images/rotating_card_profile2.png" />
+              </div> -->
+              <div class="content">
+                <div class="main">
+                  <h3 class="name">
+                  Preparation
+                  </h3>
+                  <p class="profession">
+                    Before a blood donation
+                  </p>
+                </div>
+                <div class="footer">
+                  <div class="rating">
+                    <i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!--end front panel-->
+            <div class="back">
+              <div class="header">
+                <h5 class="motto">
+                  "Be healthy always"
+                </h5>
+              </div>
+              <div class="content">
+                <div class="main">
+                  <h4 class="text-center">
+                    Start with<br><br>
+                  </h4>
+                  <p>
+                    Beginning the day before, focus on drinking plenty of water prior to your donation. Eat a hearty meal the night before your donation and get plenty of rest. Eat a well-balanced meal one to two hours prior to donation and remember to drink water throughout the day and limit caffeine intake. If you are donating platelets, do not take aspirin or products containing aspirin for at least 48 hours prior to donation. Please consult your physician prior to stopping any medications. For a list of medications acceptable for donation, please contact your Doctor
+                  </p>
+                </div>
+              </div>
+              <div class="footer">
+                <div class="social-links text-center">
+                  <a class="facebook" href="http://cretive-tim.com"><i class="fa fa-facebook fa-fw"></i></a><a class="google" href="http://cretive-tim.com"><i class="fa fa-google-plus fa-fw"></i></a><a class="twitter" href="http://cretive-tim.com"><i class="fa fa-twitter fa-fw"></i></a>
+                </div>
+              </div>
+            </div>
+            <!--end back panel-->
+          </div>
+          <!--end card-->
+        </div>
+        <!--end card-container-->
+      </div>
+      <!--end col sm 3-->
+      <div class="col-md-4 col-sm-6">
+        <div class="card-container">
+          <div class="card">
+            <div class="front">
+              <div class="cover">
+                <img src="https://thumbs.dreamstime.com/z/woman-choose-healthy-unhealthy-food-tiny-characters-holding-huge-plates-fastfood-one-side-fresh-vegetables-244217734.jpg" />
+              </div>
+              <!-- <div class="user">
+                <img class="img-circle" src="https://ct-freebies.herokuapp.com/images/rotating_card_profile.png" />
+              </div> -->
+              <div class="content">
+                <div class="main">
+                  <h3 class="name">
+                   Donation and iron deficiency
+                  </h3>
+                  <p class="profession">
+                    Tips
+                  </p>
+                  
+                </div>
+                <div class="footer">
+                  <div class="rating">
+                    <i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!--end front panel-->
+            <div class="back">
+              <div class="header">
+                <h5 class="motto">
+                  "To be or not to be, this is my awesome motto!"
+                </h5>
+              </div>
+              <div class="content">
+                <div class="main">
+                  <h4 class="text-center">
+                    Tips <br><br>
+                  </h4>
+                  <p>
+                    Iron is important for making red blood cells and transporting oxygen. Loss of red blood cells through blood donation may deplete the body of iron over time, and frequent blood donors may become low on iron before becoming anemic. Young women are particularly at risk of low iron due to blood loss during their menstrual cycles.<br><br>
+Diet alone may not be enough to replace iron, especially if you have gastrointestinal issues or do not eat red meat. If you think you may be at risk of low iron, you may consider calling your physician or taking an oral iron supplement. Do not take iron without consulting your doctor if you have any family history of too much iron in the body.
+                  </p>
+                 
+                </div>
+              </div>
+              <div class="footer">
+                <div class="social-links text-center">
+                  <a class="facebook" href="http://cretive-tim.com"><i class="fa fa-facebook fa-fw"></i></a><a class="google" href="http://cretive-tim.com"><i class="fa fa-google-plus fa-fw"></i></a><a class="twitter" href="http://cretive-tim.com"><i class="fa fa-twitter fa-fw"></i></a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+</section>
+    </body>
+</html>
